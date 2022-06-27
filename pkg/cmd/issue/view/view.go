@@ -237,6 +237,9 @@ func printHumanIssuePreview(opts *ViewOptions, issue *api.Issue) error {
 			return err
 		}
 	}
+    fmt.Fprintf(out, "\nDefault Body:\n\n")
+    fmt.Fprintf(out, "%s\n\n", issue.Body)
+    fmt.Fprintf(out, "Formatted Body:\n")
 	fmt.Fprintf(out, "\n%s\n", md)
 
 	// Comments
